@@ -24,6 +24,7 @@ public class LockAopAspect {
         //lock 취득 시도
         lockService.lock(request.getAccountNumber());
 
+
         try{
             return pjp.proceed();
         } finally {
